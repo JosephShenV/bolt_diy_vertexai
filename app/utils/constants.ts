@@ -9,7 +9,7 @@ export const WORK_DIR = `/home/${WORK_DIR_NAME}`;
 export const MODIFICATIONS_TAG_NAME = 'bolt_file_modifications';
 export const MODEL_REGEX = /^\[Model: (.*?)\]\n\n/;
 export const PROVIDER_REGEX = /\[Provider: (.*?)\]\n\n/;
-export const DEFAULT_MODEL = 'claude-3-5-sonnet-latest';
+export const DEFAULT_MODEL = 'gemini-1.5-pro-latest';
 export const PROMPT_COOKIE_KEY = 'cachedPrompt';
 
 const logger = createScopedLogger('Constants');
@@ -232,10 +232,7 @@ const PROVIDER_LIST: ProviderInfo[] = [
   },
   {
     name: 'xAI',
-    staticModels: [
-      { name: 'grok-beta', label: 'xAI Grok Beta', provider: 'xAI', maxTokenAllowed: 8000 },
-      { name: 'grok-2-1212', label: 'xAI Grok2 1212', provider: 'xAI', maxTokenAllowed: 8000 },
-    ],
+    staticModels: [{ name: 'grok-beta', label: 'xAI Grok Beta', provider: 'xAI', maxTokenAllowed: 8000 }],
     getApiKeyLink: 'https://docs.x.ai/docs/quickstart#creating-an-api-key',
   },
   {
